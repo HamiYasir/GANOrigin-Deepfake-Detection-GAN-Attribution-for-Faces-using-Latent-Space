@@ -1,0 +1,10 @@
+flask
+flask-cors
+numpy
+pillow
+torch
+torchvision
+scikit-learn
+joblib
+huggingface_hub
+opencv-python
