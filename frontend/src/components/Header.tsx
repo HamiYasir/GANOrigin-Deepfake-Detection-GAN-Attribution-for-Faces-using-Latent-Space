@@ -4,7 +4,7 @@ const Header = () => {
       <div className="flex justify-center items-center gap-3">
         <div className="w-8 h-8 bg-black rounded-full" />
         <h1 className="text-4xl font-semibold text-gray-900">
-          GAN Attribution
+          GAN Origin: Deepfake Attribution for GAN models
         </h1>
       </div>
 

@@ -1,4 +1,4 @@
-# Deepfake Detection & GAN Attribution for Faces using Latent Space
+# GANOrigin: Deepfake Detection & GAN Attribution for Faces using Latent Space
 
 This is a AI/ML project that aims to detect and attribute GAN generated images for faces. It is a two stage pipeline that first detects whether an image of a face is fake or not. If the image is found to be fake, it will attribute to which among the GAN models generated it. Our current implementation is able to attribute images to [StyleGAN2](https://github.com/NVlabs/stylegan2.git), [StyleGAN3](https://github.com/NVlabs/stylegan3.git) and [ProGAN](https://github.com/imprasukjain/PROGAN.git).
 
@@ -68,7 +68,6 @@ venv\Scripts\activate   # Windows
 pip install -r requirements.txt  
 Run: python app.py  
 ```
-Backend runs on: http://127.0.0.1:5000
 
 3. Frontend Setup
 ```
@@ -76,7 +75,6 @@ cd frontend
 npm install
 npm run dev
 ```
-Frontend runs on: http://localhost:5173
 
 ## API Endpoint
 
