@@ -2,6 +2,25 @@
 
 This is a AI/ML project that aims to detect and attribute GAN generated images for faces. It is a two stage pipeline that first detects whether an image of a face is fake or not. If the image is found to be fake, it will attribute to which among the GAN models generated it. Our current implementation is able to attribute images to [StyleGAN2](https://github.com/NVlabs/stylegan2.git), [StyleGAN3](https://github.com/NVlabs/stylegan3.git) and [ProGAN](https://github.com/imprasukjain/PROGAN.git).
 
+## Technologies Used
+
+- [ProGAN](https://github.com/imprasukjain/PROGAN): Generative model used to geerate images for latent feature extracction for model training.
+- [StyleGAN2](https://github.com/NVlabs/stylegan2.git): Generative model used to geerate images for latent feature extracction for model training.
+- [StyleGAN3](https://github.com/NVlabs/stylegan3.git): Generative model used to geerate images for latent feature extracction for model training.
+- [Hugging Face Hub](https://huggingface.co/docs/hub/index): For model hosting and deployment.
+- [Universal Fake Detect](https://github.com/WisconsinAIVision/UniversalFakeDetect.git): Pretraned model used for deepfake detection
+- [e4e Encoder](https://github.com/omertov/encoder4editing.git): Encoder used to project images to latent space.
+- [Netlify](https://www.netlify.com/): Used to deploy frontend.
+- [Render](https://render.com/): Used to deploy backend.
+- [React](https://react.dev/): Used to create the website for frontend. 
+- [Express](https://expressjs.com/): Used as middleware for backend
+- [Flask](https://flask.palletsprojects.com/en/stable/): Backend framework
+- [Python](https://www.python.org/): Overall language ussed for this project
+- [Kaggle](https://www.kaggle.com/): Used to train the model using its compute resources.
+- [Vite](https://vite.dev/): Deployment of frontend.
+- [TailwindCSS](https://tailwindcss.com/): Used for styling the frontend with React.
+- [Gardio](https://www.gradio.app/): Used to create the interface on Hugging Face Hub.
+
 ## Modules
 
 Our proposed model in it's current stage is implemented using two modules; 1) Deepfake Detection Module 2) Deepfake Attribution Module. 
@@ -27,13 +46,6 @@ It uses latent space to achieve this.
 ![Workflow Pipeline](assets/workflow_pipeline.png)  
 
 ![Architecture Diagram](assets/architecture_diagram.png)
-
-## Tech Stack
-
-Frontend: React (TypeScript + Tailwind)  
-Backend: Flask  
-ML/DL: PyTorch, Scikit-learn  
-Models: UniversalFakeDetect (CLIP-based), e4e Encoder, Linear SVM
 
 ## Results
 
@@ -98,5 +110,8 @@ Output:
 - I saw a cool site for [Deepfake Detection](https://deepfakedetection.io/). Although it only does deepfake detection, it does this cool explainability where it analyzes each part of the detected image and tells what feature's were detected that contributed that image to being a deepfake or not. While judging by my limited knowledge, I think that explainabilityh is achieved by pixel artefact detction and considereing the fact that we are not doing that, it would still be pretty cool to see that explainability in here.
 
 ## Deployment
+This has been deployed at https://huggingface.co/spaces/HAMIwithHugs/GANOrigin.  
 
-Ths has yet to be deployed :)
+It also has been deployed at https://ganorigin.netlify.app/. But due to free tier restrictions on render, this deployment wont work.  
+
+Enjoy :)
